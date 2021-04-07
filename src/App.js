@@ -12,12 +12,15 @@ class App extends Component {
 
   //Your code here:
 
+componentDidMount() {
+}
 
+componentDidUpdate() {
+  console.log(this.state.timerIDs)
+}
 
-
-
-
-
+componentWillUnmount() {
+}
 
 
   // No need to modify anything in render or the class methods below
@@ -47,6 +50,7 @@ class App extends Component {
     this.setState(prevState => ({
       timerIDs: [...prevState.timerIDs, Math.floor(Math.random()*1000)]
     }))
+
   }
 
   // removeTimer updates state, removing any timer that matches the provided author
